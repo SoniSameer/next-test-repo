@@ -37,7 +37,7 @@ export default function Home() {
         {notes.map((n, index) => (
           <li
             key={index}
-            className="p-3 bg-gray-100 rounded-md shadow-sm border text-black-900"
+            className="p-3 bg-gray-100 rounded-md shadow-sm border text-yellow-900"
           >
             {n}
           </li>
