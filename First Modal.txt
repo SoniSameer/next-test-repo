@@ -1,0 +1,33 @@
+Context & Flow
+This is a modal or popup that appears after the user clicks the "Localise Email" button on the main dashboard.
+UI Elements in the Modal
+Header
+Title: "Upload HTML File"
+Back arrow (to close or go back)
+Close (X) icon
+File Upload Area
+Large drag-and-drop zone for uploading files
+Label: "HTML" (indicating accepted file type)
+Text: "Drag HTML file here to import or, click to browse file"
+"Select files" button for manual file selection
+File Format Selection
+Label: "Select File Format"
+Button: "Email" (pre-selected, possibly the only option for now)
+Country Selection
+Label: "Select Country"
+Multiple country options as pill-shaped buttons: Germany, France, United Kingdom, Spain
+(One or more can be selected)
+Action Buttons
+"Cancel" button (to close the modal)
+"Upload" button (to proceed with the upload)
+Functionality
+The user can upload an HTML file (drag-and-drop or file picker).
+The user selects the file format (currently only "Email").
+The user selects the target country for localization.
+The user can cancel or proceed with the upload.
+Component Structure
+Modal (with header, content, and footer)
+FileUploadZone (drag-and-drop + file picker)
+FileFormatSelector (button group)
+CountrySelector (button group)
+ActionButtons (Cancel/Upload)

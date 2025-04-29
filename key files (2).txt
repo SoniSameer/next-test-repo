@@ -1,0 +1,142 @@
+Detailed Structure & Key Files
+
+1. public/
+index.html - Main HTML template.
+
+2. src/
+a. assets/
+Static images, icons, logos, etc.
+
+b. components/
+Reusable UI components:
+Sidebar/
+TopNavBar/
+Button/
+Modal/
+Drawer/
+FileUpload/
+CountrySelector/
+PromptConfig/
+FroalaEditor/
+InfoPanel/
+ReferenceList/
+Notification/
+BlockToolbar/
+BlockList/
+BlockLibrary/
+BlockStyleEditor/
+BlockTreeView/
+LoadingSpinner/
+etc.
+
+c. containers/
+Feature-level components (smart components):
+DashboardContainer.jsx
+UploadContainer.jsx
+PromptConfigContainer.jsx
+EditorContainer.jsx
+CompareDraftsContainer.jsx
+etc.
+
+d. context/
+React Contexts for global state:
+AppContext.jsx
+EditorContext.jsx
+UserContext.jsx
+etc.
+
+e. hooks/
+Custom React hooks:
+useFileUpload.js
+useLocalization.js
+useEditorBlocks.js
+useReferences.js
+useNotifications.js
+etc.
+
+f. pages/
+Route-level components:
+Dashboard.jsx
+Upload.jsx
+PromptConfig.jsx
+Editor.jsx
+CompareDrafts.jsx
+NotFound.jsx
+etc.
+
+g. routes/
+Routing configuration:
+AppRoutes.jsx
+
+h. services/
+API and backend communication:
+api.js (Axios instance)
+localizationService.js
+fileService.js
+userService.js
+etc.
+
+i. store/ (optional, if using Redux)
+Redux slices, actions, reducers:
+editorSlice.js
+userSlice.js
+draftSlice.js
+etc.
+
+j. styles/
+Global and utility styles:
+tailwind.css
+custom.css (if needed)
+
+k. utils/
+Utility/helper functions:
+formatReferences.js
+blockUtils.js
+validation.js
+etc.
+
+l. App.jsx
+Main app component, includes layout and context providers.
+
+m. index.js
+Entry point, renders <App />.
+Example: Component Directory Structure
+Apply
+
+Other Essentials
+.env For API endpoints and secrets.
+tailwind.config.js — TailwindCSS configuration.
+postcss.config.js — PostCSS configuration.
+README.md — Project documentation.
+
+components/
+├── Sidebar/
+│   └── Sidebar.jsx
+├── TopNavBar/
+│   └── TopNavBar.jsx
+├── FileUpload/
+│   └── FileUpload.jsx
+├── FroalaEditor/
+│   └── FroalaEditor.jsx
+├── InfoPanel/
+│   └── InfoPanel.jsx
+├── ReferenceList/
+│   └── ReferenceList.jsx
+├── Drawer/
+│   ├── BlockTreeView.jsx
+│   ├── BlockStyleEditor.jsx
+│   └── BlockLibrary.jsx
+
+Summary Table
+| Folder/File | Purpose |
+|---------------------|----------------------------------------------|
+| components/ | Reusable UI components |
+| containers/ | Feature-level smart components |
+| context/ | React Contexts for global state |
+| hooks/ | Custom React hooks |
+| pages/ | Route-level components |
+| routes/ | Routing configuration |
+| services/ | API/backend communication |
+| store/ | Redux state management (if used) |
+| styles/ | Global and utility styles |
+| utils/ | Helper functions |

@@ -1,0 +1,41 @@
+UI Analysis: Left Drawer Plus Icon (Insert/Block Library)
+
+Overall Layout
+Left Drawer:
+The drawer is now in "Insert" or "Block Library" mode, as indicated by the active plus icon at the top.
+The content of the drawer has changed to display a set of draggable or selectable content blocks and layout elements.
+
+Drawer Content
+1. Block/Element Library
+Basic Section:
+The drawer displays a grid of block options under a "Basic" heading.
+Each block is represented by an icon and a label, such as:
+1 Column, 2 Column, 3 Column, 2 Column 3/7 (various layout structures)
+Text (T icon)
+Link (chain icon)
+Image (picture icon)
+Video (play icon)
+(Other possible blocks not fully visible in the screenshot)
+
+Interaction:
+These blocks are likely draggable or clickable, allowing the user to insert new content or layout elements into the email/document.
+The user can select a block and place it at the desired location in the main editor area.
+Main Editor Area
+
+Localized Content:
+The right side remains the WYSIWYG editor with the localized document.
+The user can insert new blocks from the left drawer into the document, enhancing or restructuring the content as needed.
+Functionality
+
+Content Insertion:
+The user can add new layout structures (columns, rows), content types (text, image, video, link), and possibly other advanced blocks to the document.
+
+Drag-and-Drop or Click-to-Insert:
+The most common UX is drag-and-drop, but click-to-insert at the selected position is also possible.
+Live Update:
+Inserted blocks appear immediately in the main editor, ready for editing and styling.
+
+Summary
+The plus icon mode in the left drawer is an insertion panel or block library.
+It allows users to enhance the document by adding new sections, columns, and content types.
+This is a powerful feature for customizing the structure and content of localized emails or documents, similar to what you find in modern email builders or page editors.

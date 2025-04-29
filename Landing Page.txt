@@ -1,0 +1,27 @@
+UI Breakdown
+1. Sidebar (Left)
+Solid blue vertical sidebar on the left.
+Contains a chevron (arrow) button, likely for collapsing/expanding the sidebar.
+
+2. Top Navigation
+At the top, there is a horizontal navigation bar.
+"My Library" is the active tab, underlined.
+On the right side: notification bell icon and a user avatar/profile picture.
+
+3. Main Content Area
+Centered, large card with a gradient background (blue to purple).
+Large heading: "What masterpiece are we crafting today?"
+Centered card/button with:
+Envelope/mail icon
+Text: "Localise Email"
+This is likely a call-to-action button to start the localization process.
+
+4. General Style
+Clean, modern, and minimalistic.
+Uses blue as the primary accent color.
+Rounded corners and drop shadows for cards.
+Component Structure (React)
+Sidebar: Collapsible, navigation or library access.
+TopNavBar: Contains navigation tabs, notifications, and user profile.
+MainContent:
+	* WelcomeCard: Gradient background, heading, and central action button.

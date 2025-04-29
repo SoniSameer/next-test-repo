@@ -1,0 +1,63 @@
+Project Summary: Localize Email Front-End
+
+1. User Journey & Workflow
+Landing/Dashboard:
+Users are greeted with a clean dashboard and a call-to-action to "Localise Email."
+File Upload:
+Users upload an HTML email file, select the file format (currently "Email"), and choose the target country for localization.
+Prompt/Rule Configuration:
+After uploading, users configure localization instructions:
+Review preset, locked rules (e.g., compliance, scientific accuracy).
+Add or edit a custom prompt for nuanced localization needs.
+Localization Processing:
+On submitting, the backend processes the file and returns a localized draft.
+
+2. Localized Draft Editing
+WYSIWYG Editor:
+The localized email is rendered visually, block by block, using a rich text editor (e.g., Froala).
+Each block is editable and outlined, maintaining the original HTML structure.
+Info Buttons:
+Every block has an "i" button, opening a side panel with:
+The original text
+Change highlights (what was replaced/added)
+Rationale and compliance notes
+Reference mapping and traceability
+
+3. Reference Management
+References Section:
+At the end of the document, all references cited in the content are listed.
+If a reference is changed in any block, it is highlighted in the references section for compliance and auditability.
+
+4. Advanced Editing Tools (Left Drawer)
+Drawer with Three Modes:
+DOM/Structure View (Stack Icon):
+Shows a hierarchical tree of the HTML document for navigation and block selection.
+Style/Properties Editor (Pencil Icon):
+Allows users to edit CSS classes and properties (dimensions, typography, decorations, flex, etc.) for the selected block.
+Block/Element Library (Plus Icon):
+Lets users insert new layout elements (columns, text, images, videos, links, etc.) into the document via drag-and-drop or click-to-insert.
+
+5. Versioning & Comparison
+Compare Drafts:
+Users can compare different versions/drafts of the localized document, ensuring changes are tracked and justified.
+
+6. Submission & Approval
+Submit for Approval:
+Once satisfied, users can submit the localized draft for review/approval.
+
+7. UI/UX Principles
+Modern, clean, and intuitive interface
+Transparency and traceability for every change
+Compliance and audit-readiness (especially for regulated content)
+Powerful editing and customization tools for advanced users
+
+Tech Stack
+React.js (front-end framework)
+TailwindCSS (styling)
+Froala Editor (WYSIWYG editing)
+React Context/Redux (state management)
+Axios/Fetch (API communication)
+react-toastify (notifications)
+
+In summary:
+This is a robust, user-friendly platform for uploading, localizing, editing, and managing HTML email content, with a strong focus on compliance, transparency, and advanced editing capabilities.

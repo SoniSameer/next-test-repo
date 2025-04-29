@@ -1,0 +1,47 @@
+UI Analysis: Left Drawer Pencil Icon (Style/Properties Editor)
+
+Overall Layout
+Left Drawer:
+The drawer is now in a different mode, focused on editing the properties and styles of the selected element in the document.
+The top of the drawer shows the pencil icon as active/selected.
+
+Drawer Content
+1. Classes Section
+Classes Input:
+There’s a field labeled "Classes" where you can add, remove, or refresh CSS classes for the selected element.
+Example: reader-web is applied as a class to the selected element.
+There’s a dropdown for "State" (likely for pseudo-classes like :hover, :active, etc.).
+The currently selected element is shown (e.g., Div #xix372).
+
+2. Settings/Properties Sections
+Accordion Panels:
+Multiple collapsible sections for editing different CSS properties:
+Setting
+General
+Dimension
+Typography
+Decorations
+Extra
+Flex
+Each section can be expanded to reveal more controls (e.g., sliders, color pickers, input fields) for adjusting the corresponding CSS properties.
+
+Main Editor Area
+Localized Content:
+The right side remains the WYSIWYG editor with the localized document.
+The selected block is visually highlighted, and any style changes made in the left drawer will be reflected live in the editor.
+
+Functionality
+Element Styling:
+The user can directly manipulate the appearance and layout of the selected element by:
+Adding/removing CSS classes
+Adjusting properties like size, color, font, spacing, flexbox, etc.
+Live Preview:
+Changes are immediately visible in the main editor area.
+
+Element Selection:
+The drawer updates based on which element is selected in the document.
+
+Summary
+The pencil icon mode in the left drawer is a style/properties editor for the selected HTML element.
+It allows granular control over the look and feel of each block, similar to what you’d find in website builders or advanced WYSIWYG editors.
+This is useful for power users who need to fine-tune the design and layout of localized content.

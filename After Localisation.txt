@@ -1,0 +1,93 @@
+UI State: Localized Draft (WYSIWYG Editing)
+
+Context
+This is the main editing interface after localization is complete and the backend has returned the processed HTML/content.
+The user can now review, edit, and finalize the localized content before submitting it for approval.
+UI Elements Breakdown
+
+Header
+Title: "Localised Draft" (active tab, underlined)
+User Actions (Top Right): "Submit for Approval" button (primary, blue)
+User Profile/Notifications: Bell and avatar (consistent with previous screens)
+Main Content Area
+Language Indicator: "Localised Text • German" (shows the current language of the localized content)
+
+Document Preview/Editor:
+The localized email is rendered visually, closely matching the final output.
+Each editable text block is outlined (with a blue border), indicating it can be edited.
+Each block has an info ("i") button next to it, which will show more information about that block (original text, changes, rationale, etc.)—this is a key feature for transparency and traceability.
+The layout preserves the structure and style of the original HTML/email template.
+Some blocks may contain images, styled text, or other HTML elements.
+
+Editing Experience
+The user can click into any outlined block to edit the text directly (WYSIWYG).
+The info button provides context and metadata for each block.
+The editor should maintain the integrity of the HTML structure while allowing rich text editing.
+
+Component Structure
+Sidebar (navigation, consistent with previous screens)
+HeaderBar (title, actions, user info)
+LanguageIndicator
+WYSIWYGEditor (Froala or similar, rendering the localized HTML)
+EditableBlock (each block is editable, with an info button)
+InfoButton (opens a drawer/modal with block details)
+SubmitButton (for approval workflow)
+
+Functionality
+Edit: Users can edit any localized text block in place.
+Info: Clicking the info button opens a side drawer or modal with:
+Original (source) text
+Localized (current) text
+
+Change highlights
+Rationale/chain-of-thought
+Applied parameters/rules
+Submit: Once satisfied, users can submit the draft for approval.
+
+User Experience
+Highly visual, WYSIWYG editing for non-technical users.
+Transparency and traceability for every change (via info buttons).
+Maintains the look and feel of the final output while allowing edits.
+Easy to review and approve content.
+
+Technical Considerations
+Froala Integration: Use Froala’s React component to render and edit HTML blocks.
+Block Metadata: Each block should be associated with its metadata (original text, rationale, etc.), possibly via data attributes or a mapping in state.
+Info Drawer/Modal: Should be context-aware, showing details for the selected block.
+HTML Integrity: Ensure editing does not break the template structure.
+
+
+#Further elaboration for the image
+
+Key Points from the Image and Your Notes
+1. Localized Document Structure
+The localized document is rendered in a WYSIWYG/editor view.
+Each content block (e.g., paragraphs, buttons, closing lines) is visually separated and editable.
+Each block is numbered (e.g., 6, 7) and has an info ("i") button for metadata and traceability.
+
+2. References Section
+At the end of the document, there is a References section.
+This section lists all the references cited throughout the localized content, each with a number.
+
+3. Reference Tracking and Highlighting
+If a reference within any content block is changed (added, removed, or modified) during localization or editing, this change should be reflected in the references section.
+The references section should highlight or otherwise indicate which references have been changed, added, or removed compared to the original document.
+This ensures traceability and compliance, especially for regulated content.
+
+4. Info Button Functionality
+Each block’s info button allows the user to:
+View the original (source) text for that block.
+See what was changed in the localized version.
+Understand the rationale behind the change.
+See which references are associated with that block and if any have changed.
+
+5. Editing Experience
+Users can edit any block, and if they change a reference, the system should automatically update the references section and highlight the change.
+The editor must maintain the mapping between content blocks and their references.
+
+Summary of Understanding
+The localized document is editable block-by-block.
+Each block can have associated references.
+Any change to references in a block should be tracked and highlighted in the references section.
+The info button for each block provides transparency about changes, rationale, and reference mapping.
+The system must ensure reference integrity and compliance throughout the editing and localization process.

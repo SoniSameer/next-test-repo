@@ -1,0 +1,25 @@
+localize-email/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── containers/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/
+│   ├── routes/
+│   ├── services/
+│   ├── store/
+│   ├── styles/
+│   ├── utils/
+│   ├── App.jsx
+│   ├── index.js
+│   └── tailwind.css
+├── .env
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
+
+

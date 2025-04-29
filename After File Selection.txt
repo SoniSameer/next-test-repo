@@ -1,0 +1,40 @@
+UI State: After File Upload
+What Changed from Previous State
+The drag-and-drop/file picker area is replaced by a file preview card.
+The uploaded file is displayed with its name, type, and size.
+The user can now see their selected file and has the option to remove it (via the "X" icon on the file card).
+The "Upload" button is now enabled (highlighted in blue), indicating the form is ready for submission.
+UI Elements Breakdown
+Header
+Same as before: "Upload HTML File" with back arrow and close (X) icon.
+File Preview Card
+Icon indicating file type (HTML).
+File name: e.g., "Oxymat_Design.html"
+File size: e.g., "0.01MB"
+"X" icon to remove the file and return to the file selection state.
+File Format Selection
+"Email" button remains selected.
+Country Selection
+"Germany" is selected (highlighted in blue).
+Other countries (France, United Kingdom, Spain) are unselected (grey).
+Action Buttons
+"Cancel" (greyed out)
+"Upload" (active, blue, ready to be clicked)
+Functionality
+The user can:
+See the file they uploaded (with details).
+Remove the file if they want to upload a different one.
+Change the country selection.
+Click "Upload" to proceed with the localization process.
+Cancel the operation.
+Component Structure
+Modal
+FilePreviewCard (shows file details and remove option)
+FileFormatSelector
+CountrySelector
+ActionButtons
+User Experience
+Clear feedback that the file was successfully selected.
+Easy to remove and re-upload a file.
+Prevents accidental upload by requiring explicit confirmation ("Upload" button).
+Visual cues for selected options.
