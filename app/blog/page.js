@@ -45,10 +45,10 @@ export default function BlogPage() {
                 {post.title}
               </h2>
             </Link>
-            <div className="text-gray-600 mb-2">
+            <div className="text-gray-500 mb-2">
               <span>{post.date}</span> • <span>{post.category}</span>
             </div>
-            <p className="text-gray-700 mb-4">{post.excerpt}</p>
+            <p className="text-gray-500 mb-4">{post.excerpt}</p>
             <Link 
               href={`/blog/${post.slug}`}
               className="text-blue-600 hover:text-blue-800"

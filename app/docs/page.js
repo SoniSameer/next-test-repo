@@ -38,7 +38,7 @@ export default function DocsPage() {
       <div className="grid gap-8 md:grid-cols-3">
         {documentationSections.map((section) => (
           <div key={section.title} className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">{section.title}</h2>
             <ul className="space-y-2">
               {section.items.map((item) => (
                 <li key={item.title}>
@@ -56,7 +56,7 @@ export default function DocsPage() {
       </div>
 
       <div className="mt-12 bg-gray-50 p-6 rounded-lg">
-        <h2 className="text-2xl font-semibold mb-4">Need Help?</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-gray-900">Need Help?</h2>
         <p className="text-gray-700 mb-4">
           If you can't find what you're looking for, check out our blog section
           or reach out to our support team.
