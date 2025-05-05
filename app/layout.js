@@ -36,9 +36,9 @@ export default function RootLayout({ children }) {
             <div className="container mx-auto flex justify-between items-center">
               <div className="flex items-center space-x-4">
                 <a href="/home" className="text-xl font-bold">TechHub</a>
+                <span className="text-gray-300">Welcome, {userEmail}</span>
               </div>
               <div className="space-x-4 flex items-center">
-                <span className="text-gray-300">Welcome, {userEmail}</span>
                 <a href="/blog" className="hover:text-gray-300">Blog</a>
                 <a href="/docs" className="hover:text-gray-300">Documentation</a>
                 <a href="/categories" className="hover:text-gray-300">Categories</a>
