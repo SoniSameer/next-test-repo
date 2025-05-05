@@ -2,13 +2,20 @@
 
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import Cookies from 'js-cookie'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   const pathname = usePathname()
+  const router = useRouter()
   const isLoginPage = pathname === '/'
+
+  const handleLogout = () => {
+    Cookies.remove('auth-token')
+    router.push('/')
+  }
 
   return (
     <html lang="en">
@@ -17,11 +24,17 @@ export default function RootLayout({ children }) {
           <nav className="bg-gray-800 text-white p-4">
             <div className="container mx-auto flex justify-between items-center">
               <a href="/home" className="text-xl font-bold">TechHub</a>
-              <div className="space-x-4">
+              <div className="space-x-4 flex items-center">
                 <a href="/blog" className="hover:text-gray-300">Blog</a>
                 <a href="/docs" className="hover:text-gray-300">Documentation</a>
                 <a href="/categories" className="hover:text-gray-300">Categories</a>
                 <a href="/about" className="hover:text-gray-300">About</a>
+                <button
+                  onClick={handleLogout}
+                  className="cursor-pointer ml-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition duration-300"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           </nav>

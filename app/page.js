@@ -1,6 +1,39 @@
-import Head from 'next/head';
+"use client"
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import Cookies from 'js-cookie'
+import Head from 'next/head'
 
 export default function LoginPage() {
+  const router = useRouter()
+  const [error, setError] = useState('')
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setError('')
+
+    // Dummy authentication check
+    if (formData.email === 'test@example.com' && formData.password === 'password123') {
+      // Set auth token in cookies
+      Cookies.set('auth-token', 'dummy-token-123', { expires: 1 }) // Expires in 1 day
+      router.push('/home')
+    } else {
+      setError('Invalid email or password')
+    }
+  }
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    })
+  }
+
   return (
     <>
       <Head>
@@ -9,7 +42,12 @@ export default function LoginPage() {
       <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-md">
           <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">Login to Your Account</h2>
-          <form className="space-y-5">
+          {error && (
+            <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
+              {error}
+            </div>
+          )}
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-600">
                 Email
@@ -17,8 +55,10 @@ export default function LoginPage() {
               <input
                 type="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="you@example.com"
-                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
                 required
               />
             </div>
@@ -30,8 +70,10 @@ export default function LoginPage() {
               <input
                 type="password"
                 id="password"
+                value={formData.password}
+                onChange={handleChange}
                 placeholder="••••••••"
-                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
                 required
               />
             </div>
@@ -45,10 +87,10 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-4 text-center text-sm text-gray-500">
-            Don’t have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
+            Don't have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
           </p>
         </div>
       </div>
     </>
-  );
+  )
 }
