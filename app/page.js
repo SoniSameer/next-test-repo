@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie'
 import Head from 'next/head'
+import { validateUser } from './lib/users'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -17,10 +18,13 @@ export default function LoginPage() {
     e.preventDefault()
     setError('')
 
-    // Dummy authentication check
-    if (formData.email === 'test@example.com' && formData.password === 'password123') {
-      // Set auth token in cookies
+    // Validate user credentials using the shared validation function
+    const user = validateUser(formData.email, formData.password)
+    
+    if (user) {
+      // Set auth token and user email in cookies
       Cookies.set('auth-token', 'dummy-token-123', { expires: 1 }) // Expires in 1 day
+      Cookies.set('user-email', user.email, { expires: 1 }) // Store user email for role checking
       router.push('/home')
     } else {
       setError('Invalid email or password')
